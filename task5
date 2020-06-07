@@ -1,0 +1,65 @@
+課題１実行結果と$lsオプション
+
+ec2-user:~/environment (master) $ ls -l
+total 32
+-rw-r--r-- 1 ec2-user ec2-user  229 May 21 11:00 css_intro
+drwxrwxr-x 3 ec2-user ec2-user 4096 May 21 12:12 gitsample
+drwxrwxr-x 3 ec2-user ec2-user 4096 May 21 04:30 gitsample2
+drwxr-xr-x 4 ec2-user ec2-user 4096 May 22 09:52 HTML
+drwxrwxr-x 3 ec2-user ec2-user 4096 May 31 11:37 php_practice
+-rw-rw-r-- 1 ec2-user ec2-user    0 May 30 13:28 practice.php
+-rw-r--r-- 1 ec2-user ec2-user  569 Apr 24 03:54 README.md
+-rw-rw-r-- 1 ec2-user ec2-user    0 May 20 13:31 sample
+-rw-rw-r-- 1 ec2-user ec2-user    0 May 24 14:48 sample２
+-rw-rw-r-- 1 ec2-user ec2-user    0 May 24 14:46 sample2.txt
+drwxrwxr-x 2 ec2-user ec2-user 4096 May 20 12:05 space1
+drwxrwxr-x 2 ec2-user ec2-user 4096 Jun  7 12:28 workspace
+
+$lsオプション
+・$ls-a:全て表示する
+・$ls-l:ファイルの詳細も表示する
+・$ls-1:リストを縦に並べる
+・$ls-r:逆順で表示する
+・$ls-t更新時間順に並べる
+・$ls-S:ファイルサイズ順でソートする
+・$ls-X:ファイルを拡張子ごとに並べる
+・$ls-R:ディレクトリ内容を再帰的に表示する
+・$ls-full-time:タイムスタンプの詳細を表示する
+・$ls-m:ファイルをカンマで区切って表示する
+・$ls-h:単位を読みやすい形式で表示する
+・$ls-k:キロバイト単位で表示する
+・$ls-i:ファイル名の左にi-node番号を表示する
+・$ls-F:情報の付加
+・$ls-help:ヘルプの表示
+
+課題２　echoコマンドの役割と使い方について
+
+・echoコマンドとは:コンピュータに対する命令(コマンド)の一つであり、画面に文字を表示する時に使うコマンド
+
+・オプション
+-n:改行を出力しない
+-e:バックスラッシュによるエスケープシーケンスを有効にする
+-E:バックスラッシュによるエスケープシーケンスを無効にする
+—help:ヘルプを表示する
+—version:ライセンスとかバージョンとかを表示する
+
+課題３
+ec2-user:~/environment (master) $ echo Hello Techboost > practice.php
+
+課題４
+catコマンドとは:ファイルを連結するためのコマンドですが、ファイルの内容をサッと表示する際によく使われる
+
+・オプション
+-n:行番号を付け加える。ファイルの内容を行番号つきで表示する
+-b:行番号を付け加える。ただし空白行には付けない
+-s:連続した空行を一行にする
+-v:TAB、改行、回ページ以外の非表示文字を表示する
+-t:非表示文字を表示、TABを”＾I”、用紙送りを”＾L”とする
+-E:行の最後に”$”を表示する
+-A:全ての非表示文字を表示する(ーvET)と同じ
+-e:TABを除く全ての非表示文字を表示する(-vE)と同じ
+・cat ファイル名:ファイルの内容を表示する
+・cat ファイル1 ファイル2 ファイル3 > 新しいファイル:複数のファイルを連結して一つのファイルにする
+
+ec2-user:~/environment (master) $ cat practice.php
+Hello Techboost
